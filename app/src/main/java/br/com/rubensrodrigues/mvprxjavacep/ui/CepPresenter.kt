@@ -29,20 +29,6 @@ class CepPresenter : CepContract.Presenter{
         disposable.add(RetrofitConfig().getCepService().enderecoPorCep(cep)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-//            .subscribe(object : SingleObserver<Cep>{
-//                override fun onSuccess(endereco: Cep) {
-//                    view?.mostrarEndereco(endereco)
-//                }
-//
-//                override fun onSubscribe(d: Disposable) {
-//                    d.dispose()
-//                }
-//
-//                override fun onError(e: Throwable) {
-//                    view?.toast("Deu ruim")
-//                    Log.e("ON ERROR", "${e.message}")
-//                }
-//            })
             .subscribe(
                 { view?.mostrarEndereco(it) },
                 { view?.toast("Deu ruim") })
