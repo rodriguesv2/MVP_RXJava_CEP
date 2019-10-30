@@ -37,15 +37,12 @@ class CepPresenter : CepContract.Presenter{
 //        val call = RetrofitConfig().getCepService().enderecoPorCep(cep)
 //        call.enqueue(object : Callback<Cep>{
 //            override fun onResponse(call: Call<Cep>, response: Response<Cep>) {
-//                Log.i("ON RESPONSE", "PASSOU AQUI")
 //                val endereco = response.body() as Cep
-//                Log.i("ON RESPONSE", endereco.logradouro)
 //                view?.mostrarEndereco(endereco)
 //            }
 //
 //            override fun onFailure(call: Call<Cep>, t: Throwable) {
 //                view?.toast("Falha ${t.message}")
-//                Log.e("ON FAILURE", "${t.message}")
 //            }
 //        })
     }

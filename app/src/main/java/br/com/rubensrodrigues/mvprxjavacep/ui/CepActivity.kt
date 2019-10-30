@@ -28,9 +28,7 @@ class CepActivity : AppCompatActivity(), CepContract.View {
     }
 
     override fun mostrarEndereco(cep: Cep) {
-        Log.i("VIEW INFLATE", "FORA DO APPLY")
         cep.apply {
-            Log.i("VIEW INFLATE", "ENTROU AQUI")
             enderecoCep.text = logradouro
             complementoCep.text = complemento
             bairroCep.text = bairro
