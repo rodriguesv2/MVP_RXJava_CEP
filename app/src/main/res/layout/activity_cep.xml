@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CepActivity">
+
+    <EditText
+        android:id="@+id/campoCep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="8"
+        android:text="06804110"
+        android:hint="Insira o CEP"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/enderecoCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Emiliano di Cavalcanti"
+        android:textSize="22sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/campoCep"
+        app:layout_constraintTop_toBottomOf="@id/campoCep" />
+
+    <TextView
+        android:id="@+id/complementoCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Numero par"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/enderecoCep"
+        app:layout_constraintTop_toBottomOf="@id/enderecoCep" />
+
+    <TextView
+        android:id="@+id/bairroCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Cercado Grande"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/complementoCep"
+        app:layout_constraintTop_toBottomOf="@id/complementoCep" />
+
+    <TextView
+        android:id="@+id/cidadeCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Embu das Artes"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/bairroCep"
+        app:layout_constraintTop_toBottomOf="@id/bairroCep" />
+
+    <TextView
+        android:id="@+id/ufCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text=" - SP"
+        android:textSize="22sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/cidadeCep"
+        app:layout_constraintBottom_toBottomOf="@id/cidadeCep" />
+
+    <Button
+        android:id="@+id/botaoCep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Consultar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
